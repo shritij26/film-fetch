@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  background: linear-gradient(-45deg, #1c1c1c, #2c3e50, #34495e, #1a1a1a);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease-in-out infinite; /* AI */
+}
+
+@keyframes gradientMove {  
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffcc70;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #ff5722;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e64a19;
+}
+
+/* Movie Card */
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.movie-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.movie-card h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #ffcc70;
+}
+
+.movie-card p {
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #eee;
+}
+
+/* AI */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  input, button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .movie-card {
+    padding: 12px;
+  }
+
+  .movie-card h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .movie-card p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .movie-card img {
+    border-radius: 6px;
+  }
+}
